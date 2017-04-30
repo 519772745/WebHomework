@@ -1,0 +1,9 @@
+body{font: 12px 'Arial';line-height: 2em}
+a{color: #727272;text-decoration: none;}
+a:hover{text-decoration: underline;}
+.title{font-size: 14px;color:#b9f605;font-weight: bold;}
+.title a:link{color:#ffffff}
+.title a:visited{color:#ffffff}
+.title a:hover{color:#b9f605;text-decoration: none;}
+
+.orange{color: #fdb306}
