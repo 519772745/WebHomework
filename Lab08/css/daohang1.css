@@ -1,0 +1,47 @@
+#titlediv{
+	background-image:url(../image/left_nav_title.gif);
+	background-repeat: no-repeat;
+	color: white;
+	font-family: '宋体';
+	text-align: center;
+	line-height: 32px;
+	height: 47px;
+	width: 183px;
+	margin-left: 40px;
+	margin: bottom:0px;
+	padding-top: 5px;
+}
+
+ul{background-image: url(../image/left_nav_txt.gif);
+	background-position: 183px 47px;
+	width: 140px;
+	list-style-image: url(../image/left_cur.gif);
+	font-family: '宋体';
+	font-weight: 500;
+	line-height: 2em;
+	margin-top: -8px;
+	margin-left: 40px;
+	padding-top: 5px;
+}
+ul a{
+	text-decoration: none;
+	color: black;
+
+}
+li {background-image: url(../image/left_nav_item.gif);
+	background-repeat: no-repeat;
+	background-position: bottom;
+	width: 120px;}
+
+.checked a{color: red;font-size: 1.1em;}
+
+#footerdiv{
+	background-image: url(../image/left_nav_bottom.gif);
+	background-repeat: no-repeat;
+	height: 35px;
+	width: 182.5px;
+	margin-top: -16px;
+	margin-left: 40px;
+	margin: bottom:0px;
+	padding-top: 5px;
+}
