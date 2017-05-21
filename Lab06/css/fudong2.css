@@ -1,0 +1,75 @@
+.bei1{background-color: white;
+		width: 700px;
+		height: 500px;}
+.bei2{background-color:#ff99ff;
+		border: black 4px solid;
+		width: 600px;
+		height: 480px;
+		margin: 2px 3px 5px 5px;}
+.bing1{background-color: #0099ff;
+		border:red 3px solid;
+		margin: 0px 8px;
+		height: 130px;
+		}
+.bing2{background-color: #333366;
+		border:red 3px solid;
+		margin: 0px 8px;
+		height: 240px;
+		}
+.bing3{
+	background-color: #ffcc33;
+		border:red 3px solid;
+		margin: 0px 8px;
+		height: 70px;
+		}
+.bing11{
+	border: red 1px solid;
+	margin: 0px 10px;
+	height: 30px;
+}
+.bing111{
+	background-color: #ccff99;
+	margin: 0px;
+	border: red 1px solid;
+	width: 100px;
+	height: 30px;
+	float: left;
+}
+.bing112{background-color: #ffff99;
+	margin: 0px;
+	border: red 1px solid;
+	float: left;
+	height: 30px;
+	width: 454.3px;
+}
+.bing12{
+background-color: #66ff33;
+border: red 1px solid;
+margin: 0px 10px;
+height: 97px;
+}
+
+.bing21
+{
+	border: red 1px solid;
+	margin: 3px 9px 10px 5px;
+	height: 230px;
+}
+
+.bing211{
+	border: red 2px solid;
+	margin: 0px;
+	background-color: #33cc00;
+	width: 300px;
+	height: 230px;
+	float: left;
+}
+
+.bing212{
+border: red 2px solid;
+	margin: 0px;
+	background-color: #ffff00;
+	width: 257px;
+	height: 230px;
+	float: left;
+}
