@@ -1,0 +1,324 @@
+/*统一设置*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body
+{
+	font-size: 12px;
+	color: #522a06;
+	font-family: '宋体';
+	margin: 0px auto;
+	background-image: url("../images/bodybg.gif");
+}
+
+img{border: 0px;}
+
+
+a{text-decoration: none;}
+a:link{color:#522a06;}
+a:hover{text-decoration: underline;}
+
+
+/*对首部的设置*/
+#header
+{
+	height: 205px;
+	background-image: url("../images/bg.gif");
+	background-position: center top;
+
+}
+#bannner
+{
+	width: 1000px;height:164px;
+	margin:auto;
+}
+#banner_img{
+	display: block;
+	padding-left:200px;padding-top:38px;padding-bottom: 26px;
+
+}  /*logo图片*/
+#nav
+{
+	height: 40px;
+	background-image: url("../images/nav.jpg");
+}
+#nav_body{
+	width: 1000px;
+	margin: 0px auto;
+	font-weight: bold;
+	color: #ffffff;
+}
+#nav_content ul{
+	list-style-type: none;
+}
+#nav_content ul li{                  /*目录文字*/
+	float: left;
+	margin:14px 5px;
+
+}
+#nav_content a{
+	color:#fff;
+	height: 40px;
+}
+#nav_content a:hover{
+	color: #f9f603;
+	text-decoration: none;
+}
+
+
+#nav_search{
+	float: right;
+	margin-right:25px;
+	margin-top: 12px;
+}
+
+#search_1{
+	width: 140px;
+	height: 19px;
+background-color: #f8f5ee;
+float: left;
+
+}
+#search_2{
+
+	float: left;
+}
+#search_botton{width:44px;
+	height: 21px;
+	background-color:#000;
+	color:#fff;
+	border: 1px solid #f8f5ee;}
+
+/*中间的部分*/
+#content{
+	width:1000px;
+	margin:20px auto;
+	clear: both;
+
+}
+#content_top{
+	overflow:hidden;
+}
+ 
+
+   /*新闻图片*/
+#news_pic{
+	width: 324px;height: 242px;
+	background-image: url("../images/news_bg.png");
+	float: left;
+}
+#news_pic img{
+	width:300px;height:200px;
+	padding-top: 12px;padding-left: 12px;
+}
+#news_pic p{
+	width: 300px;width: 22px;
+	width: 100%;
+	text-align: center;
+
+}
+
+/*中间的新闻列表*/
+
+#news_list_content{
+	
+
+}
+#news_list_content ul li{height: 30px;
+clear: both;
+text-decoration: disc;
+list-style-position: outside;
+}
+#news_list_content ul li a{
+	color: #522a06
+}
+#news_list{
+	width: 330px;
+	margin-left: 38px;
+	float: left;
+}
+#news_list_left{float: left;}   /*标题部分*/
+#news_list_right{float: right;}
+
+.date{float: right;}
+
+
+/*右边的部分*/
+#news_announce
+{
+	width: 277px;
+	margin-top: 12px;
+	float: right;
+}
+
+#news_announce_content
+{
+width: 285px;
+height: 205px;
+background-image: url("../images/board_bg.png");
+}
+
+#news_announce_title{
+padding-left: 90px;
+}
+
+#news_announce_content ul
+{list-style-position: inside;
+padding-top: 20px;
+padding-left: 15px;
+padding-right: 10px;}
+#news_announce_content ul li{
+	height: 25px;
+	padding-left:5px;
+	padding-right: 10px
+}
+
+
+
+/*下面左边的部分*/
+#content_bottom_left
+{width: 715px;
+float: left;
+margin-top: 15px}
+
+.academic
+{
+	width: 340px;
+	float: left;
+}
+
+#academic_right img{
+	position:absolute;padding: 0px;
+	margin-top: -50px;
+	margin-left:-25px;
+}
+#academic_content ul li{
+height: 30px;
+clear: both;
+text-decoration: disc;
+list-style-position: outside;
+}
+#academic_content ul li a{
+	color: #522a06}
+
+#academic_title{height: 54px}
+#academic_left{float: left;}  
+#academic_right{float: right;}
+
+
+
+.book_news
+{
+	width: 340px;
+	margin-left: 25px;
+	float: left;
+}
+
+#book_news_right img{
+	position:absolute;padding: 0px;
+	margin-top: -50px;
+	margin-left:-25px;
+}
+#book_news_content ul li{
+height: 30px;
+clear: both;
+text-decoration: disc;
+list-style-position: outside;
+}
+#book_news_content ul li a{
+	color: #522a06
+}
+
+#book_news_title{height: 54px}
+#book_news_left{float: left;}  
+#book_news_right{float: right;}
+
+
+.fengcai
+{
+	width: 700px;
+	clear: both;
+}
+
+#fengcai_right
+{float: right;}
+#fengcai_content
+{height: 136px;
+padding:20px;
+background-image: url("../images/fengcai_bg2.png");
+width: 636px;
+}
+
+#fengcai_content ul{
+	list-style-type: none;
+}
+#fengcai_content ul li{
+	float: left;
+}
+#fengcai_content ul li a img{
+	border: solid white 1px;
+	margin: 2px
+}
+
+
+/*右边的部分*/
+
+#content_bottom_right
+{
+	width: 280px;margin-top: 50px;
+	float: right;
+}
+
+#mingjia_title
+{height: 30px;padding-left: 80px}
+#mingjia_content
+{
+margin-top:30px;
+width: 280px;
+height: 362px;
+background-image: url("../images/show_bg.png");}
+
+#mingjia_jieshao img{
+	width: 220px;
+margin-top: 25px;
+margin-left: 30px;
+}
+#mingjia_jieshao p
+{width: 220px;
+margin-top:20px;
+margin-left:30px}
+#teshu{font-weight:bolder;color: red;}
+#mingjia_more{
+	float: right;
+margin-right: 30px;
+margin-top:30px;}
+
+
+/*尾部*/
+#footer
+{
+	height: 120px;
+	clear: both;
+	background-image: url("../images/foot.gif");
+	padding: 10px
+}
+
+
+#footerLink ul
+{list-style-type: none;
+margin-left: 450px;
+padding-top: 30px}
+
+#footerLink ul li{float: left;padding: 10px;font-weight: bold;
+}
+#footerLink ul li a {color: #522a06;}
+#xiahuaxian img{clear: both;
+padding-left: 430px;
+width:590px;}
+#copyright{clear: both;
+margin-left: 525px;
+margin-top: 10px}
+#shenpi{padding-left: 578px;
+margin-top: 10px}
