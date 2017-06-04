@@ -1,0 +1,236 @@
+/*统一设置*/
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+body
+{
+	font-size: 12px;
+	color: #522a06;
+	font-family: '宋体';
+	margin: 0px auto;
+	background-image: url("../images/bodybg.gif");
+}
+
+img{border: 0px;}
+
+
+a{text-decoration: none;}
+a:link{color:#522a06;}
+a:hover{text-decoration: underline;}
+
+
+/*对首部的设置*/
+#header
+{
+	height: 205px;
+	background-image: url("../images/bg.gif");
+	background-position: center top;
+
+}
+#bannner
+{
+	width: 1000px;height:164px;
+	margin:auto;
+
+}
+#banner_img{
+	display: block;
+	padding-left:200px;padding-top:38px;padding-bottom: 26px;
+
+}  /*logo图片*/
+#nav
+{
+	height: 40px;
+	background-image: url("../images/nav.jpg");
+}
+#nav_body{
+	width: 1000px;
+	margin: 0px auto;
+	font-weight: bold;
+	color: #ffffff;
+}
+#nav_content ul{
+	list-style-type: none;
+}
+#nav_content ul li{                  /*目录文字*/
+	float: left;
+	margin:14px 5px;
+
+}
+#nav_content a{
+	color:#fff;
+	height: 40px;
+}
+#nav_content a:hover{
+	color: #f9f603;
+	text-decoration: none;
+}
+
+
+#nav_search{
+	float: right;
+	margin-right:25px;
+	margin-top: 12px;
+}
+
+#search_1{
+	width: 140px;
+	height: 19px;
+background-color: #f8f5ee;
+float: left;
+
+}
+#search_2{
+
+	float: left;
+}
+#search_botton{width:44px;
+	height: 21px;
+	background-color:#000;
+	color:#fff;
+	border: 1px solid #f8f5ee;}
+
+/*中间的部分*/
+#content{
+	width:1000px;
+	margin:20px auto;
+	clear: both;
+	overflow: hidden;
+
+}
+
+/*左边的部分*/
+#left
+{
+	width: 700px;
+	margin: 5px auto;
+	float: left;
+}
+
+#left p
+{text-indent: 2em;}
+
+#daohang
+{
+	font-weight: 600
+}
+#title
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	line-height: 45px
+}
+#biaoti{font-family: '黑体';
+		margin-bottom:10px;}
+#xiaozi{
+	color: gray;
+	font-size: 1.2em;
+	font-family: '黑体';
+	text-indent:none;
+}
+#zhengwen{
+	line-height: 20px;
+	margin-bottom:20px;
+}
+
+#zhengwen img{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 78px
+}
+
+#link{margin-top: 20px}
+#link_left
+{
+	float: left;
+}
+#link_right
+{float: left;
+margin-left: 30px;}
+#link span{font-weight: bold;}
+#link a{color:#522a06}
+
+
+/*右边的部分*/
+#right{
+	width: 280px;
+	float: left;
+	margin-left: 16px
+}
+
+#update{
+	border: 1px solid #c9baa5;
+	background-image: url("../images/bg.png");
+	margin-bottom: 20px;
+}
+
+#update img{
+	margin-bottom: 10px;
+	margin-left: 40px;
+}
+#update ul{
+	list-style-type: none;
+	margin-left: 13px;
+	line-height: 30px
+}
+
+#mingjia
+{width: 280px;
+margin-top: 20px;
+margin-bottom: 29px;}
+
+#mingjia_title img
+{margin-top: 25px;
+margin-bottom: 10px;
+padding-left: 80px}
+#mingjia_content
+{
+margin-top:30px;
+width: 280px;
+height: 362px;
+background-image: url("../images/show_bg.png");}
+
+#mingjia_jieshao img{
+	width: 220px;
+margin-top: 25px;
+margin-left: 30px;
+}
+#mingjia_jieshao p
+{width: 220px;
+margin-top:20px;
+margin-left:30px}
+#teshu{font-weight:bolder;color: red;}
+#mingjia_more 
+{
+	margin-left: 20px;
+	margin-top: 5px;
+}
+/*尾部*/
+#footer
+{
+	height: 120px;
+	clear: both;
+	background-image: url("../images/foot.gif");
+	padding: 10px
+}
+
+
+#footerLink ul
+{list-style-type: none;
+margin-left: 450px;
+padding-top: 30px}
+
+#footerLink ul li{float: left;padding: 10px;font-weight: bold;
+}
+#footerLink ul li a {color: #522a06;}
+#xiahuaxian img{clear: both;
+padding-left: 430px;
+width:590px;}
+#copyright{clear: both;
+margin-left: 525px;
+margin-top: 10px}
+#shenpi{padding-left: 578px;
+margin-top: 10px}
