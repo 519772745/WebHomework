@@ -1,0 +1,288 @@
+*{margin: 0px;padding: 0px;}
+a{text-decoration: none;color: white}
+a:hover{text-decoration: underline;}
+body{font-family: '黑体';background-color: #fafafa;}
+audio{width: 100%}
+.top
+{
+	width: 100%;
+	height: 964px;
+	background-image: url("../images/title_bg.png");
+	background-position: center top;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+#search
+{float: right;
+width: 400px;
+margin-right: -40px;
+margin-top: 40px;}
+.search_button
+{
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: transparent;
+}
+#teshu{margin-left: 20px}
+
+#logo
+{float:left;
+position:absolute;
+z-index:99999;
+}
+#logo img{
+	position: absolute;
+	margin-left:70px;
+	margin-top: 110px }
+
+#catalog
+{float:right;
+border-bottom: solid white 5px;
+margin-top: 170px;
+margin-right:-370px;
+padding-right: 0px}
+#catalog ul
+{list-style-type: none;}
+#catalog ul li
+{float: left;
+font-weight: bold;
+font-size: 30px;
+color: white;
+padding-left: 10px;
+padding-bottom: 15px;}
+
+#catalog ul li a:hover
+{text-decoration: none;}
+#welcome
+{float: left;
+	margin-top: 800px}
+
+/*主体部分*/
+.body
+{width: 100%;
+height:auto;}
+
+#jiaocheng
+{
+	background-color: #e9e9e9;
+	height: 350px;
+}
+
+/*教程*/
+#jiaoheng_title
+{margin-left: 260px;
+padding-top:40px;}
+#jiaoheng_title span a
+{position: absolute;
+margin-left:-500px;
+font-size: 14px;
+margin-top: 6px;
+color: #5b5b5b;
+font-family:"等线","宋体";}
+#movie
+{margin-left: 280px;
+width: 1000px}
+#movie div
+{
+height: 255px;
+width: 289px;
+background-image: url("../images/jiaocheng_bg.png");
+margin-right: 25px;
+margin-top: 9px;
+float:left;}
+
+#movie div>img
+{float: left;
+padding-left: 3px}
+#movie div>a>img
+{
+position: absolute;
+margin-left: -279px;
+z-index:999999;
+opacity: 0;
+}
+#movie div>a>img:hover
+{
+position: absolute;
+margin-left: -279px;
+z-index:999999;
+opacity: 100;
+}
+#movie p
+{
+width: 289px;
+text-align: center;
+color: #5b5b5b;
+font-family: "宋体";
+font-size:15px;
+float: left;
+margin-top:15px}
+
+/*展示*/
+#exhibition
+{
+	background-color: #020c4b;
+	height: 500px;
+}
+#shows 
+{
+	width: 750px;
+	float: left;
+	margin-left: 260px;
+	margin-top:75px;
+	margin-bottom: 50px;
+}
+#shows div
+{width: 145px;
+height: 144px;
+margin: 15px;
+border: 2px solid white;
+float: left;
+
+}
+#shows div>a>img
+{
+	position: absolute;
+	margin-top: -148px;
+	z-index:999999;
+	opacity: 0;
+}
+#shows div>a>img:hover
+{
+	position: absolute;
+	margin-top: -148px;
+	z-index:999999;
+	opacity: 100;
+}
+
+
+#exhibition_title
+{width: 143px;
+height: 500px;
+background-image: url("../images/exhibition_title.png");
+float: left;
+margin-left: 40px}
+#exhibition_title a
+{float: right;
+padding-right:13px;
+padding-top: 320px;}
+
+   /*成员*/
+#members
+{
+	background-image: url("../images/members_bg.png");
+	background-position: right;
+	height: 450px;
+}
+
+#members_title
+{float: left;
+margin-left: 280px;
+margin-top:50px;
+width: 280px;
+height: 300px}
+#members_title a
+{float: right;
+padding-right: 90px;
+padding-top: 10px}
+
+#members_content
+{float: left;
+margin-left: -50px;
+margin-top: 70px}
+#members_content div
+{
+background-image: url("../images/members_bg1.png");
+background-repeat: no-repeat;
+width: 155px;
+height: 308px;
+margin-right: 20px;
+float:left;}
+
+#members_content div:hover
+{
+background-image: url("../images/members_bg2.png");
+background-repeat: no-repeat;
+width: 155px;
+height: 308px;
+margin-right: 20px;
+float:left;}
+
+#members_content div img
+{
+	padding-left: 28px;
+	padding-top: 40px;
+}
+#members_content div p
+{
+	width: 100px;
+	font-family: '宋体';
+	font-size:11px;
+	color: #787878;
+	padding-left: 28px;
+	padding-top: 10px;
+	line-height: 18px;
+}
+#members_content div span a
+{float: right;
+color: #787878;
+font-size: 9px;
+margin-right: 25px;
+padding-top: 10px}
+
+
+
+
+
+/*底部*/
+.bottom
+{width: 100%;
+height: auto;
+clear: both;}
+
+#us
+{
+	height: 270px;
+	background-color: #373535;
+}
+#qq
+{
+	margin-left: 300px;
+	padding-top:20px;
+	width: 199px;
+	float: left;
+}
+#qq p
+{color: white;
+font-family: '黑体';
+font-size: 20px;
+margin-bottom: 15px}
+
+#about
+{
+	margin-left: 100px;
+	width: 520px;
+	color: white;
+	float: left;
+	padding-top:20px;
+}
+#a_title
+{
+	font-family: '黑体';
+	font-size: 20px;
+	margin-bottom: 15px
+}
+#a_text
+{
+	line-height: 30px;
+	font-family: '幼圆';
+	padding-top: 5px;
+}
+
+#banquan
+{height: 50px;
+background-color: #000000;
+text-align: center;
+color: white;
+padding-top: 8px}
