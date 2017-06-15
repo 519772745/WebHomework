@@ -12,6 +12,8 @@ audio{width: 100%}
 	background-repeat: no-repeat;
 	overflow: hidden;
 }
+#search form
+{display: inline;}
 #search
 {float: right;
 width: 400px;
@@ -46,7 +48,7 @@ padding-right: 0px}
 {list-style-type: none;}
 #catalog ul li
 {float: left;
-font-weight: bold;
+
 font-size: 30px;
 color: white;
 padding-left: 10px;
@@ -102,12 +104,15 @@ margin-left: -279px;
 z-index:999999;
 opacity: 0;
 }
+#movie div>a
+{width: 0px;height: 0px;
+	display: block;}
 #movie div>a>img:hover
 {
 position: absolute;
 margin-left: -279px;
 z-index:999999;
-opacity: 100;
+opacity: 1;
 }
 #movie p
 {
@@ -148,12 +153,15 @@ float: left;
 	z-index:999999;
 	opacity: 0;
 }
+#shows div>a
+{	display: block;
+	width: 0px;height: 0px}
 #shows div>a>img:hover
 {
 	position: absolute;
 	margin-top: -148px;
 	z-index:999999;
-	opacity: 100;
+	opacity: 1;
 }
 
 

@@ -1,0 +1,186 @@
+*{margin: 0px;padding: 0px;}
+a{text-decoration: none;color: white}
+a:hover{text-decoration: underline;}
+body{font-family: '黑体';
+	background-image: url("../images/bg.jpg");}
+
+#top
+{
+	background-image: url("../images/title_bg1.png");
+	height: 180px
+}
+
+#logo
+{float:left;
+position:absolute;
+z-index:99999;
+margin-left: 150px;
+margin-top: 50px;
+}
+
+#top_right
+{float: right;
+width: 1000px}
+#search
+{float: right;
+width: 480px;
+margin-right: 60px;
+margin-top: 50px;}
+#search form
+{display: inline;}
+.search_button
+{
+	color: white;
+	padding-left: 10px;
+	padding-right: 10px;
+	background: transparent;
+}
+#teshu{margin-left: 20px;}
+
+#catalog
+{float:right;
+margin-top: 30px;
+margin-right: 150px;}
+#catalog ul
+{list-style-type: none;}
+#catalog ul li
+{float: left;
+font-size: 20px;
+color: white;
+padding-left: 10px;
+padding-bottom: 15px;}
+
+#catalog ul li a:hover
+{text-decoration: none;}
+
+/*中间部分*/
+#body
+{width: 1000px;
+height: 2080px;
+margin: 0px auto;
+background-color: #e9e9e9}
+#welcome
+{position: absolute;
+margin-left: 1000px;}
+#bread
+{
+	font-size: 17px;
+	color: #535353;
+	padding-left: 60px;
+	padding-top: 20px;
+}
+#bread a
+{
+	font-size: 17px;
+	color: #535353;
+}
+
+#contents
+{
+width:700px;
+margin: 70px auto;
+text-align: center;
+}
+
+#contents h2
+{padding-top: 20px;
+margin-bottom: 20px;
+color: #594d4d;
+font-size: 30px}
+
+#title p
+{
+	color: #727272;
+	margin-top: 15px;
+	margin-bottom: 20px;
+	font-family: '宋体';
+	font-size:12px;
+}
+
+#txt
+{
+	color: #727272;
+	font-family: '宋体';
+	font-size:14px;
+	text-align: left;
+	padding-top: 40px;
+	line-height: 26px;
+}
+#txt_title
+{color: #ff9e57;
+font-family: '黑体';
+font-size: 24px;}
+
+#txt_link
+{color: #2a52ff}
+
+#comment
+{width:700px;
+margin: 90px auto;}
+#comment_title{
+	color: #565656;
+	font-size: 23px;
+	padding-top: 150px;
+	margin-left: -50px;
+	margin-bottom: 40px;
+	
+}
+#comment_botton
+{float: right;
+margin-top: 20px;
+}
+#comment_botton input
+{margin-left: 30px;}
+#comments
+{margin-top: 100px}
+#comments_icon
+{float: left;
+width: 150px}
+#comments_content
+{float: left;
+width: 350px;
+margin-left: 50px;}
+#comment_textarea
+{width: 710px}
+#comments_content div
+{line-height: 20px;
+background-image: url("../images/comments.png");
+background-repeat: no-repeat;
+height: 100px;
+margin-left: -15px;
+margin-top: 10px}
+#comments1
+{color: #4c4747;
+font-family: '宋体';
+font-size: 14px;
+padding-top: 25px;
+padding-left: 40px;}
+
+
+#page
+{
+	margin-left:170px;
+	clear: both;
+	padding-top: 40px;
+}	
+#page ul
+{list-style-type: none;}
+#page li
+{
+float: left;
+margin-left: 25px}
+#page a
+{color: #565656;
+font-family:'宋体';}
+/*底部*/
+#bottom
+{height: 50px;
+background-color: #000000;
+text-align: center;
+color: white;
+padding-top: 8px;
+padding-bottom: 8px;
+width: 100%;
+height: auto;
+clear: both;}
+
