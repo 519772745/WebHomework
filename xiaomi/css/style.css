@@ -1,0 +1,143 @@
+/*  title-导航栏（p-家电 ul-目录）
+	content-内容部分
+	show-最左侧展示栏
+	goods-中间展示栏
+	special-右下角展示栏*/
+*{margin: 0px;padding: 0px;background-color: #f5f5f5}
+body{text-align: center;}
+	/*设置导航栏*/
+#title{height: 50px;
+		width: 1290px;
+		margin: 0 auto;
+		margin-top: 40px;
+		}
+#title p{
+	float: left;
+	font-size: 25px;
+	font-family: "幼圆"
+}
+#title ul{float: right;
+			list-style-type: none;
+			margin-top: 10px;
+			margin-right: 72px;}
+#title ul li{float: left;
+			margin: 0 13px;
+			color: #343434;
+			font-size: 17px;
+		}
+	/*设置商品部分*/
+#content{
+		height: 900px;
+		width: 1300px;
+		margin: 0 auto;
+		margin-top: 10px;
+}
+#content div{
+	float: left;
+	margin-right: 17px;
+	width: 228.6px;
+}
+	/*最右侧的展示区*/
+#show img{
+	height: 600px
+}
+	/*中间的商品区*/
+.imgs{height: 166px; }
+.every_goods{
+	width: 228.6px;
+	height: 292px;
+	margin-bottom: 17px;
+	background-color: white;
+}
+
+#new_p{
+	font-size: 12.2px;
+	font-weight: bold;
+	text-align: left;
+	background-color:#ff6d00;
+	color: #fff8f2;
+	width: 180px;
+	margin-top: 13px;
+	margin-left: 32px;
+}
+#new_p2{
+	color: #ffbf8f;
+	background-color:#ff6d00;
+	font-size: 12px;
+	font-weight: normal;
+	height: 12px;
+	margin-top: -10px;
+	margin-left: 32px;
+	text-align: left;
+	}
+
+	/*文字简介部分*/
+
+.goods p{
+	background-color: white;
+	height: 50px;
+	text-align: center;
+	color:#a8a8a8;
+	font-size: 12px;
+	margin-bottom: 8px;
+}
+.goods p span{
+	background-color: white;
+}
+		/*特殊的字体*/
+.black{
+	color: black;
+	font-size: 15px;
+}
+.orange{
+	color: #ff8100;
+	font-size: 14px;
+}
+.gray{
+	text-decoration: line-through;
+	font-size: 14px;
+}
+	/*右下角*/
+#special{
+	background-color: #f5f5f5;
+}
+#special div{
+	height: 132px;
+	background-color: white;
+	margin-bottom: 25px;
+}
+#special_image{
+	height: 121px;
+}
+		/*展示的图片大小*/
+#special img{
+	float: right;
+	width: 80px;
+	margin-right: 10px;
+
+}
+		/*上方文字部分*/
+#special p{
+	text-align: left;
+	margin-top: 40px;
+	margin-left: 30px;
+	color: black;
+	font-size: 14px;
+	line-height: 20px;
+}
+		/*下方文字部分*/
+			/*浏览更多*/
+#more p{float: left;
+		width: 100px;
+		line-height: 20px;
+		text-align: left;
+		margin-left: 30px;
+		margin-top: 40px;
+		color:#7e7e7e;
+		font-size: 12px; }
+			/*类别*/
+#special_title{font-size: 18px;color: black;}
+		/*下方图片部分*/
+#more img{
+	margin-top: 20px;
+}

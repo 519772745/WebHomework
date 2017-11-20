@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>家电</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!--标题-->
+	<div id="title">
+		<p>家电</p>
+		<ul>
+			<li>热门</li>
+			<li>电视影音</li>
+			<li>电脑</li>
+			<li>家具</li>
+		</ul>
+	</div>
+	<div id="content">
+		<!--第一列-->
+		<div id="show"><img src="img/water.png"></div> 
+		<!--第二列-->
+		<div class="goods">
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+				 <p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p>
+				 </div>
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+			<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p></div>
+		</div>
+		<!--第三列-->
+		<div class="goods">
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+			<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p></div>
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+			<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p></div>
+		</div>
+		<!--第四列-->
+		<div class="goods">
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+			<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p></div>
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+			<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p></div>
+		</div>
+		<!--第五列-->
+		<div class="goods">
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+			<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p></div>
+			<div id="special">
+				<div><img src="img/pic2.png" id="special_image">
+					<p id="special_text">小白摄像机</br>
+						<span class="orange">389元</span></p>
+				</div>
+				<div id="more">
+					<p><span id="special_title">浏览更多</span></br>
+					热门</p>
+					<img src="img/more.png" id="img_more">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript">
+var lists=document.getElementsByTagName('li');
+var imgs=document.getElementsByClassName('imgs');
+var img_special=document.getElementById('special_image');
+var img_more=document.getElementById('img_more');
+var special_text=document.getElementById('special_text');
+/*实现标题栏的效果*/
+for (var i = 0; i < lists.length; i++) {
+	lists[i].a=i;
+	lists[i].onmouseover=function(){
+		for (var j = 0; j < lists.length; j++) {
+			lists[j].style.color='#343434';
+			lists[j].style.paddingBottom='';
+			lists[j].style.borderBottom='';
+		}
+		this.style.color='#ff8100';
+		this.style.paddingBottom='5px';
+		this.style.borderBottom='2px solid #ff8100';
+		if (this.a==0) {
+			for (var j = 0; j < imgs.length; j++) {
+				imgs[j].src="img/pic1.png";
+			}
+			img_special.src="img/pic2.png";
+			img_more.src="img/more.png";
+			special_text.innerHTML="小白摄像机";
+			special_text.innerHTML+="<br>";
+			special_text.innerHTML+="<span>389元</span>";
+			var a=special_text.children;
+			a[1].style.color="#ff8100";
+		}
+		else if (this.a==1) {
+			for (var j = 0; j < imgs.length; j++) {
+				imgs[j].src="img/pic3.png";
+			}
+			img_special.src="img/pic4.png";
+			img_more.src="img/more.png";
+			special_text.innerHTML="盒子3&nbsp;增强版";
+			special_text.innerHTML+="<br>";
+			special_text.innerHTML+="<span>399元</span>";
+			var a=special_text.children;
+			a[1].style.color="#ff8100";
+		}
+		else if (this.a==2) {
+			for (var j = 0; j < imgs.length; j++) {
+				imgs[j].src="img/pic5.png";
+			}
+			img_special.src="img/pic6.png";
+			img_more.src="img/more.png";
+			special_text.innerHTML="多功能转接器";
+			special_text.innerHTML+="<br>";
+			special_text.innerHTML+="<span>149元</span>";
+			var a=special_text.children;
+			a[1].style.color="#ff8100";
+		}
+		else {
+			for (var j = 0; j < imgs.length; j++) {
+				imgs[j].src="img/pic7.png";
+			}
+			img_special.src="img/pic8.png";
+			img_more.src="img/more.png";
+			special_text.innerHTML="Yeelight&nbsp;LE...";
+			special_text.innerHTML+="<br>";
+			special_text.innerHTML+="<span>379元</span>";
+			var a=special_text.children;
+			a[1].style.color="#ff8100";
+		}
+	}
+};
+/*实现商品目录的评价效果*/
+var everygoods=document.getElementsByClassName('every_goods')
+for (var i = 0; i < everygoods.length; i++) {
+	everygoods[i].onmouseover=function(){
+		this.style.marginTop='-5px';
+		this.style.marginBottom='22px';
+		/*插入div*/
+		var new_div=document.createElement("div");
+		new_div.id="new_div";
+		new_div.style.width="228.6px";
+		new_div.style.height="100px";
+		new_div.style.backgroundColor="#ff6d00";
+		new_div.style.position="absolute";
+		new_div.style.marginTop="-94px";
+		this.appendChild(new_div);
+		/*插入段落*/
+		var new_p=document.createElement("p");
+		new_p.id="new_p";
+		new_div.appendChild(new_p);
+		var text=document.createTextNode("很不错，超级轻，画面超级好，很满意，物美价廉，推荐购...");
+		new_p.appendChild(text);
+
+		var new_p2=document.createElement("p");
+		new_p2.id="new_p2";
+		new_div.appendChild(new_p2);
+		var text2=document.createTextNode("来自于lu_2014的评价");
+		new_p2.appendChild(text2);
+	};
+		
+	everygoods[i].onmouseout=function(){
+		this.style.marginTop='';
+		new_div.removeChild(new_p2);
+		new_div.removeChild(new_p);
+		this.removeChild(new_div);
+
+	}
+};
+
+/*实现右下角的浮动效果*/
+var special=document.getElementById('special');
+var more=document.getElementById('more');
+special.onmouseover=function(){
+	special.style.marginTop='-2px';
+}
+special.onmouseout=function(){
+	special.style.marginTop="";
+}
+more.onmouseover=function(){
+	more.style.marginTop='-2px';
+}
+more.onmouseout=function(){
+	more.style.marginTop="";
+}
+</script>
+</html>
