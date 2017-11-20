@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>roll</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<div style="height:25px;width:250px;background-color: red;overflow:hidden;margin-left:10px;position:relative">
+		<div id="first" style="height:25px;width:250px;position: absolute;"><p style="font-size:16px;line-height:25px;margin: 0;color:white;">啦啦啦啦德玛西亚(～￣▽￣)～ </p></div>
+		<div id="second" style="height:25px;width:250px;position: absolute;color:white;"><p style="font-size:16px;line-height:25px;margin: 0;">啦啦啦啦德玛西亚(～￣▽￣)～ </p></div>
+	</div>
+</body>
+<script type="text/javascript">
+	var first=document.getElementById('first');
+	var second=document.getElementById('second');
+	var i=0;
+	setInterval(
+		function() {
+		first.style.left=(-i)+"px";
+		second.style.left=250+(-i)+"px";
+		i+=1;
+		if (i==250) {
+			i=0;
+		}
+	}
+	,30)
+</script>
+</html>
