@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>QQ聊天</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		ul,ol,li{
+			list-style: none;
+		}
+		.clearFix:after{
+			content: "";
+			display: block;
+			clear: both;
+		}
+		#wrap{
+			width: 678px;
+			height: 615px;
+			margin: 10px auto;
+			border: 1px solid #000; 
+			background-color: #f8f7f4;
+		}
+		/*顶部样式*/
+		.header{
+			height: 50px;
+		}
+		.header>span{
+			float: left;
+			margin: 20px 0 0 12px;
+			line-height: 30px;
+		}
+		.headImg{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: url(img/head.jpg) center center;
+			background-size: cover;
+		}
+		/*导航样式*/
+		.nav{
+			height: 40px;
+			line-height: 37px;
+			border-bottom: 1px solid #e2e1df;
+		}
+		.nav>li{
+			float: left;
+			margin: 0 8px;
+			padding: 0 4px;
+			cursor: default;
+			color: #767676;
+		}
+		.nav>li:last-child:after{
+			content: "▼";
+			font-size: 10px;
+			margin-left: 5px;
+		}
+		.nav>li:hover{
+			color: #000;
+		}
+		.nav>.active{
+			color: #000;
+			border-bottom: 3px solid #009bdb;
+		}
+		/*底部主体样式*/
+		.footer>div{
+			float: left;
+		}
+		.notice{
+			width: 200px;
+			height: 525px;
+			border-left: 1px solid #e2e1df;
+
+		}
+		/*消息框样式*/
+		.talk{
+			width: 476px;
+		}
+		.talkMsg{
+			width: 476px;
+			height: 400px;
+			overflow-y: auto;
+			border-bottom: 1px solid #e2e1df;
+			position: relative;
+		}
+		.time{
+			text-align: center;
+			color: #808080;
+			font-size: 10px;
+			line-height: 30px;
+		}
+		.talkInp{
+			height: 124px;
+			position: relative;
+		}
+		.myHead{
+			float: right;
+			margin-right: 12px;
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background: url(img/myHead.jpg) center center;
+			background-size: cover;
+		}
+		.content{
+			float: right;
+		}
+		.conText{
+			padding: 10px;
+			max-width: 380px;
+			line-height: 22px;
+			border-radius: 8px;
+			margin-right: 10px;
+			font-size: 12px;
+			float: left;
+			background-color: #dfdddb;
+		}
+		.area{
+			width: 456px;
+			padding: 5px 10px;
+			height: 50px;
+			resize: none;
+			outline: none;
+			border: none;
+			background-color: #f8f7f4;
+		}
+		.btn{
+			float: right;
+		}
+		.btn li{
+			font-weight: bold;
+			cursor: default;
+			display: block;
+			float: left;
+			height: 24px;
+			line-height: 24px;
+			padding: 0 16px;
+			margin-right: 12px;
+			border-radius: 4px;
+			font-size: 12px;
+			background-color: #dbd1be;
+		}
+		.send{
+			position: relative;
+		}
+		.send:after{
+			content: "▼";
+			color: #6e695f;
+			margin-left: 15px;
+		}
+		.warning{
+			width: 150px;
+			height: 50px;
+			border: 1px solid lightblue;
+			border-radius: 8px;
+			padding: 0 5px;
+			position: absolute;
+			left: -70px;
+			top: -55px;
+			display: none;
+		}
+		#box{
+			background-color: rgba(223,221,219,0.8);
+			height: 143px;
+			width: 129px;
+			list-style-image;
+			position: absolute;
+			display:none;
+			z-index: 999;
+		}
+		#box p{
+			height: 24px;
+			width: 95px;
+			background-color: white;
+			margin-left: 27px;
+			padding-left: 13px;
+			line-height:23px; 
+			font-size: 12px;
+			cursor: default;
+		}
+		.text_line{
+			text-decoration: underline;
+		}
+		.cut_off{
+			border-bottom: 1px solid #bbbbbb;
+		}
+		#more{
+			background-color: white;
+			width: 382px;
+			height: 249px;
+			position: absolute;
+			box-shadow: 0px 0px 20px #929292;
+			top: -249px;
+			z-index: 998;
+			display: none;
+		}
+		#more_title{
+			height: 30px;
+			color: black;
+			font-size: 13.5px;
+			line-height: 30px;
+		}
+		#more_title>p{
+			float: left;
+			margin-left: 15px;
+		}
+		#more_title>div{
+			float: right;
+			color: #62aeef;
+			width: 100px;
+			margin-right: -5px;
+		}
+		#more_title>div>p{
+			float: left;
+			margin-right: 6px;
+		}
+		#more_title>div>img{
+			float: left;
+			margin-top: 5px;
+			height: 20px;
+		}
+		#more_content{
+			height: 183px;
+			padding-left: 10px;
+			overflow:auto;
+		}
+		#more_content img{
+			margin-left: 1px;
+			margin-right: 1px;
+		}
+		#more_bottom img{
+			height: 36px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="header">
+			<span class="headImg"></span>
+			<span>三四班一家亲</span>
+		</div>
+		<ul class="nav">
+			<li class="active">聊天</li>
+			<li>公告</li>
+			<li>相册</li>
+			<li>文件</li>
+			<li>活动</li>
+			<li>设置</li>
+		</ul>
+		<div class="footer">
+			<div class="talk">
+				<div class="talkMsg">
+					<ul id="msgBox">
+						<li class="clearFix">
+							<p class="time">2017/10/12 16:59:32</p>
+							<p class="content">
+								<span class="conText">好好学习</span>
+								<span class="myHead"></span>
+							</p>
+						</li>
+						<li class="clearFix">
+							<p class="time">2017/10/12 16:59:32</p>
+							<p class="content">
+								<span class="conText">天天向上</span>
+								<span class="myHead"></span>
+							</p>
+						</li>
+						<div id="box">
+							<ul>
+								<li class="box_li"><p>复制(<span class="text_line">C</span>)</p></li>
+								<li class="box_li"><p class="cut_off">全部选择(<span class="text_line">A</span>)</p></li>
+								<li class="box_li"><p>显示比例</p></li>
+								<li class="box_li"><p>使用多彩气泡</p></li>
+								<li class="box_li"><p class="cut_off">设置多彩气泡</p></li>
+								<li class="box_li"><p>清屏</p></li>
+							</ul>
+						</div>
+					</ul>
+				</div>
+				<div class="talkInp">
+					<div id="functions">
+						<img src="img/tit_02.png">
+						<img src="img/tit_03.png">
+						<img src="img/tit_04.png">
+						<img src="img/tit_05.png">
+						<img src="img/tit_06.png">
+						<img src="img/tit_07.png">
+						<img src="img/tit_08.png">
+						<img src="img/tit_09.png">
+						<img src="img/tit_10.png">
+						<img src="img/tit_11.png">
+						<img src="img/tit_13.png">
+						<div id="more">
+							<div id="more_title">
+								<p>经典表情</p>
+								<div><p>表情DIY</p>
+									<img src="img/setting.png"></div>
+							</div>
+							<div id="more_content"></div>
+							<div id="more_bottom">
+								<img src="img/more.png">
+							</div>
+						</div>
+					</div>
+
+					<textarea class="area"></textarea>
+					<ul class="btn">
+						<li>关闭(c)</li>
+						<li class="send">
+							发送(s)
+							<p class="warning">发送内容不能为空，请重新输入</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="notice">
+
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	var send = document.getElementsByClassName('send')[0];
+	var area = document.getElementsByClassName('area')[0];
+	var warning = document.getElementsByClassName('warning')[0];
+	var talkMsg = document.getElementsByClassName('talkMsg')[0];
+	var box=document.getElementById('box');
+	var box_li=document.getElementsByClassName('box_li');
+	for (var i = 0; i < box_li.length; i++) {
+		var a=box_li[i].children[0];
+		a.onmouseover=function(){
+			this.style.backgroundColor="#009bdb";
+			this.parentNode.style.color="white";
+			this.parentNode.style.backgroundColor="#009bdb";
+		}
+		a.onmouseout=function(){
+			this.style.backgroundColor="";
+			this.parentNode.style.color="";
+			this.parentNode.style.backgroundColor="";
+		}
+	}
+	talkMsg.oncontextmenu=function(e){
+			e.preventDefault();
+			box.style.display='block';
+			box.style.left=e.clientX-talkMsg.offsetLeft+3+'px';
+			box.style.top=e.clientY-talkMsg.offsetTop+3+'px';
+	}
+	talkMsg.onclick=function(){
+			box.style.display='';
+	}
+	var timer;
+	// 回车发送消息
+	area.onkeydown = function(e){
+		if(e.keyCode == 13&&e.shiftKey==false){
+			send.onclick();
+			e.preventDefault();
+		}
+	}
+	// 点击发送按钮发送消息
+	send.onclick = function(){
+		if (area.value == '') {
+			warning.style.display = 'block';
+			clearTimeout(timer);
+			timer = setTimeout(function(){
+				warning.style.display = 'none';
+			},1000)
+		}else{
+			var li = document.createElement('li');
+			li.className = 'clearFix';
+			li.innerHTML = '<p class="time">'+new Date().toLocaleString()+'</p><p class="content"><span class="conText">'+area.value+'</span><span class="myHead"></span></p>';
+			msgBox.appendChild(li);
+			li.scrollIntoView();
+			area.value ='';
+			area.focus();
+		}
+	}
+	var fun_emoji=document.getElementById('functions').children[1];
+	console.log(fun_emoji);
+	var emoji=document.getElementById('more_content');
+	var more=document.getElementById('more');
+	for (var j = 1; j <=132 ; j++) {
+		var a=document.createElement("img");
+		emoji.appendChild(a);
+		a.src='img/emoji/'+j+'.gif';
+	}
+	var k=0;
+	fun_emoji.onclick=function(){
+		if (k==1) {
+			more.style.display="";
+			fun_emoji.src="img/tit_03.png";
+			k=0;
+		}
+		else{
+			more.style.display="block";
+			fun_emoji.src="img/tit_01.png";
+			k=1;
+		}
+	}
+</script>
+</html>
