@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>河北师范大学</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+		<div class="top">
+			<div class="the_top">
+				<div></div>
+			</div>
+			<div class="content">
+				<img src="images/logo.png">
+				<div>
+					<div>
+						<a href="#">旧版网页</a>
+						<a href="#">EngLish&nbsp;Version</a>
+					</div>
+					<form action="" method="get">
+						<input name="" type="text" class="search" value="&nbsp;&nbsp;&nbsp;搜索" /><!--搜索框-->
+						<input name="" type="button" class="search_botton"/><!--搜索按钮-->
+					</form>
+				</div>
+			</div>
+				<ul id="nav">
+					<li><a href="#">首页</a>
+					</li>
+					<li><a href="#"	class="special">学校概况</a>
+						<ul>
+							<li><a href="#">学校简介</a></li>
+							<li><a href="#">学科专业</a></li>
+							<li><a href="#">治理架构</a></li>
+							<li><a href="#">历史改革</a></li>
+							<li><a href="#">学校标志</a></li>
+							<li><a href="#">校园风光</a></li>
+							<li><a href="#">校园地图</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="special">机构设置</a>
+						<ul>
+							<li><a href="#">教学单位</a></li>
+							<li><a href="#">管理服务</a></li>
+							<li><a href="#">附属单位</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="special">人才培养</a>
+						<ul>
+							<li><a href="#">师资队伍</a></li>
+							<li><a href="#">本科生教育</a></li>
+							<li><a href="#">研究生教育</a></li>
+							<li><a href="#">继续教育</a></li>
+							<li><a href="#">留学生教育</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="special">科学研究</a>
+						<ul>
+							<li><a href="#">科学研究平台</a></li>
+							<li><a href="#">自然科学与技术</a></li>
+						</ul>
+					</li>
+					<li><a href="#" class="special">招生就业</a>
+						<ul>
+							<li><a href="#">本科生招生</a></li>
+						</ul>
+					</li>
+					<li><a href="#">人才招聘</a>
+					</li>
+					<li><a href="#" class="special">公共服务</a>
+						<ul>
+							<li><a href="#">本科生服务</a></li>
+							<li><a href="#">研究生服务</a></li>
+							<li><a href="#">生活服务</a></li>
+							<li><a href="#">网络服务</a></li>
+						</ul>
+					</li>
+					<li><a href="#">校友会</a>
+					</li>
+				</ul>
+		</div>
+		<div class="bottom">	
+			<div class="photo">
+				<img src="images/banner_00.gif" id="photos">
+				<div>
+					<p>怀天下&nbsp;求真知
+					<span>For&nbsp;the&nbsp;World,For&nbsp;the&nbsp;Truth</span></p>
+					<div id="before"><p>＜</p></div>
+					<div id="after"><p>＞</p></div>
+				</div>
+			</div>
+		</div>
+</body>
+
+<script type="text/javascript">
+	var special=document.getElementsByClassName('special');
+	for (var i = 0; i < special.length; i++) {
+		special[i].parentNode.onmouseover=function () {
+				this.className = "sfhover";
+				this.style.color="#FFF";
+				} 						
+		special[i].parentNode.onmouseout = function() {
+				this.className = "special";
+				}	
+	};
+	var photos=document.getElementById('photos');
+	var i=0;
+	var div=document.getElementsByClassName('photo')[0].children[1];
+	var before=document.getElementById('before');
+	var after=document.getElementById('after');
+	function rolling(){
+			if (i==0) {
+				photos.src="images/banner_0"+i+".gif";
+				}
+			else{photos.src="images/banner_0"+i+".jpg";}
+			i=(i+1+8)%8;
+		}
+	var roll=window.setInterval("rolling()",1200);
+	div.onmouseover=function(){
+		before.style.display="block";
+		after.style.display="block";
+		before.onmousedown=function(){
+			window.clearInterval(roll);
+			i=(i-1+8)%8;
+			if (i==0) {
+				photos.src="images/banner_0"+i+".gif";
+				}
+			else{photos.src="images/banner_0"+i+".jpg";}
+		}
+		before.onmouseup=function(){
+			roll=window.setInterval("rolling()",1200);
+		}
+		after.onmousedown=function(){
+			window.clearInterval(roll);
+			i=(i+1+8)%8;
+			if (i==0) {
+				photos.src="images/banner_0"+i+".gif";
+				}
+			else{photos.src="images/banner_0"+i+".jpg";}
+		}
+		after.onmouseup=function(){
+			roll=window.setInterval("rolling()",1200);
+		}
+	}
+	div.onmouseout=function(){
+		before.style.display="none";
+		after.style.display="none";
+	}
+	
+
+</script>
+</html>

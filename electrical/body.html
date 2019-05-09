@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>家电</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<!--标题-->
+	<div id="title">
+		<p>家电</p>
+		<ul>
+			<li>热门</li>
+			<li>电视影音</li>
+			<li>电脑</li>
+			<li>家具</li>
+		</ul>
+	</div>
+	<div class="content">
+		<!--第一列-->
+		<div id="show"><img src="img/water.png"></div> 
+		<!--商品部分-->
+		<div id="goods">
+			<!--第一行的商品部分-->
+		<div id="goods_row1">
+			<!--1-1-->
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+				 <p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p>
+			</div>
+			<!--1-2-->
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+				<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p>
+			</div>
+			<!--1-3-->
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+				<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p>
+			</div>
+			<!--1-4-->
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+				<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p>
+			</div>
+		</div>
+			<!--第二行的商品部分-->
+		<div id="goods_row2">
+			<!--2-1-->
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+				<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p>
+			</div>
+			<!--2-2-->
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+				<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p>
+			</div>
+			<!--2-3-->
+			<div class="every_goods"><img src="img/pic1.png" class="imgs">
+				<p><span class="black">小米电视4A 32"</span></br>
+				 64位四核处理器/1GB+4GB大内存</br></p>
+				 <p><span class="orange">999元</span><span class="gray">1199元</span></p>
+			</div>
+			<!--2-4&右下特殊部分-->
+			<div id="special">
+				<!--上面一行的商品-->
+				<div id="special_top">
+					<div id="special_goods">
+						<!--配图-->
+						<img src="img/pic2.png" id="special_image">
+						<!--配字-->
+						<p id="special_text">小白摄像机</br>
+							<span class="orange">389元</span></p>
+					</div>
+				</div>
+				<!--下面一行的商品-->
+				<div id="special_bottom">
+					<div id="more">
+						<!--配字-->
+						<p><span id="special_title">浏览更多</span></br>
+						<span id='special_bottom_text'>热门</span></p>
+						<!--配图-->
+						<img src="img/more.png" id="img_more">
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</body>
+
+
+<!--=================================
+				Script部分
+	=================================-->
+<script type="text/javascript">
+/*==================================================
+					标题部分
+===================================================*/
+var lists=document.getElementsByTagName('li');	//获得导航栏的元素
+	/*实现一开始的默认选中效果*/
+	lists[0].style.color='#ff8100';
+	lists[0].style.paddingBottom='5px';
+	lists[0].style.borderBottom='2px solid #ff8100';
+var imgs=document.getElementsByClassName('imgs');	//获得商品中（除右下）要更改的图片元素
+var img_special=document.getElementById('special_image');//获得要更改的右下上半部分的图片元素
+var special_text=document.getElementById('special_text');//获得要更改的右下上半部分的文字元素
+var special_bottom_text=document.getElementById('special_bottom_text');//“浏览更多”的要更改的文字部分
+
+/*实现标题栏选中不同标签的界面变换的效果*/
+for (var i = 0; i < lists.length; i++) {
+	lists[i].a=i;	//添加序号
+	lists[i].onmouseover=function(){
+		/*先重新设置一遍导航栏的样式（灰色无下划线）*/
+		for (var j = 0; j < lists.length; j++) {	
+			lists[j].style.color='#343434';
+			lists[j].style.paddingBottom='';
+			lists[j].style.borderBottom='';
+		}
+		/*设置被选中的导航的样式（橙色粗下划线）*/
+		this.style.color='#ff8100';					
+		this.style.paddingBottom='5px';
+		this.style.borderBottom='2px solid #ff8100';
+		/*设置商品的变换效果
+		（为了省事每页图片都换成同一张了）
+		 a=0 -> 热门
+		 a=1 ->电视影音
+		 a=2 ->电脑
+		 a=3 ->家具 */
+		if (this.a==0) {
+			for (var j = 0; j < imgs.length; j++) {
+				imgs[j].src="img/pic1.png";					//更改商品的图片
+			}
+			img_special.src="img/pic2.png";					//更改右下的图片
+			special_text.innerHTML="小白摄像机";				//更改右下文字部分
+			special_text.innerHTML+="<br>";
+			special_text.innerHTML+="<span>389元</span>";
+			var a=special_text.children;
+			a[1].style.color="#ff8100";						//特殊设置价格的颜色
+			special_bottom_text.innerHTML="热门";			//更改“浏览更多”部分的文字
+		}
+		else if (this.a==1) {
+			for (var j = 0; j < imgs.length; j++) {
+				imgs[j].src="img/pic3.png";
+			}
+			img_special.src="img/pic4.png";
+			img_more.src="img/more.png";
+			special_text.innerHTML="盒子3&nbsp;增强版";
+			special_text.innerHTML+="<br>";
+			special_text.innerHTML+="<span>399元</span>";
+			var a=special_text.children;
+			a[1].style.color="#ff8100";
+			special_bottom_text.innerHTML="电视";								//同上
+		}
+		else if (this.a==2) {
+			for (var j = 0; j < imgs.length; j++) {
+				imgs[j].src="img/pic5.png";
+			}
+			img_special.src="img/pic6.png";
+			img_more.src="img/more.png";
+			special_text.innerHTML="多功能转接器";
+			special_text.innerHTML+="<br>";
+			special_text.innerHTML+="<span>149元</span>";
+			var a=special_text.children;
+			a[1].style.color="#ff8100";
+			special_bottom_text.innerHTML="电脑";								//同上
+		}
+		else {
+			for (var j = 0; j < imgs.length; j++) {
+				imgs[j].src="img/pic7.png";
+			}
+			img_special.src="img/pic8.png";
+			img_more.src="img/more.png";
+			special_text.innerHTML="Yeelight&nbsp;LE...";
+			special_text.innerHTML+="<br>";
+			special_text.innerHTML+="<span>379元</span>";
+			var a=special_text.children;
+			a[1].style.color="#ff8100";
+			special_bottom_text.innerHTML="家具";												//同上
+		}
+	}
+};
+
+/*对于每个商品元素的处理*/
+var everygoods=document.getElementsByClassName('every_goods')	//获取每个商品元素
+	/*设置被选中时元素的上浮+阴影效果*/
+for (var i = 0; i < everygoods.length; i++) {
+	everygoods[i].onmouseover=function(){			
+		this.style.marginTop='-5px';					//上浮
+		this.style.boxShadow='5px 8px 30px #888888';	//阴影
+	/*设置评论区*/	
+		/*插入div*/
+		var new_div=document.createElement("div");
+		this.appendChild(new_div,this.firstElementChild); //加入到商品的div中
+			/*设置div的css*/
+			new_div.id="new_div";
+			new_div.style.width="228.6px";
+			new_div.style.height="100px";
+			new_div.style.backgroundColor="#ff6d00";
+			new_div.style.position="absolute";
+			new_div.style.marginTop="-94px";	
+		/*插入段落*/
+			//上方的评价
+		var new_p=document.createElement("p");
+		new_div.appendChild(new_p);		//插入到新建的评论区的div中
+		new_p.id="new_p";
+			/*设置p的css*/
+			new_p.style.backgroundColor="#ff6d00";
+			new_p.style.color="#fff8f2";
+			new_p.style.width="168px";
+			new_p.style.textAlign="left";
+			new_p.style.marginBottom="0px";
+		/*插入文本*/
+		var text=document.createTextNode("很不错，超级轻，画面超级好，很满意，物美价廉，推荐购...");
+		new_p.appendChild(text);
+
+			//下方的署名
+		var new_p2=document.createElement("p");
+		new_div.appendChild(new_p2);	//插入到新建的评论区的div中
+		new_p2.id="new_p2";
+		/*设置p2的css*/
+			new_p2.style.backgroundColor="#ff6d00";
+			new_p2.style.color="#ffbf8f";
+			new_p2.style.width="168px";
+			new_p2.style.height="20px";
+			new_p2.style.textAlign="left";
+			new_p2.style.marginLeft="32px";
+		/*插入文本*/
+		var text2=document.createTextNode("来自于lu_2014的评价");
+		new_p2.appendChild(text2);
+	};
+	/*设置鼠标滑出的效果*/	
+	everygoods[i].onmouseout=function(){
+		this.style.marginTop='';	//取消商品div的上浮和阴影
+		this.style.boxShadow='';
+		new_div.removeChild(new_p2);	//删除新插入的p2，p1，div
+		new_div.removeChild(new_p);
+		this.removeChild(new_div);
+	}
+};
+
+/*实现右下角的浮动效果*/
+	//上半部分
+var special_goods=document.getElementById('special_goods');
+special_goods.onmouseover=function(){
+	special_goods.style.marginTop='-2px';
+	special_goods.style.boxShadow='5px 8px 30px #888888';
+}
+special_goods.onmouseout=function(){
+	special_goods.style.marginTop="";
+	special_goods.style.boxShadow='';
+}
+	//下半部分
+var more=document.getElementById('more');
+more.onmouseover=function(){
+	more.style.marginTop='-2px';
+	more.style.boxShadow='5px 8px 30px #888888';
+}
+more.onmouseout=function(){
+	more.style.marginTop="";
+	more.style.boxShadow='';
+}
+</script>
+</html>
