@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>评价</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+	body{
+		margin: 0 auto;
+		width: 727px;
+		text-align: center;
+	}
+	.comment{
+		margin-top: 20px;
+		height: 416px;
+		width: 727px;
+	}
+	.comment div{
+		width: 727px;
+	}
+	.title{
+		height: 47px;
+		background-color: #f3f8fe;
+		text-align: left;
+		line-height: 47px;
+		font-size: 17px;
+	}
+	.title p{
+		margin-left: 29px;
+	}
+	#stars{
+		height: 30px;
+		margin-top: 19px;
+		margin-bottom: 25px;
+	}
+	#stars img{
+		height: 25px;
+		float: left;
+		margin-right: 8px;
+	}
+	#sfirst{
+		margin-left: 27px;
+	}
+	textarea{
+		float: left;
+		width: 674px;
+		height: 255px;
+		margin-left: 25px;
+	}
+	select{
+		float: right;
+		width: 114px;
+		height: 32px;
+		margin-right: 35px;
+		margin-top: 5px;
+	}
+	</style>
+</head>
+<body>
+	<div class="comment">
+		<div class="title">
+			<p>宝贝与描述相符(打分匿名)</p>
+		</div>
+		<div id="stars">
+			<img src="images/star0.png" id="sfirst">
+			<img src="images/star0.png">
+			<img src="images/star0.png">
+			<img src="images/star0.png">
+			<img src="images/star0.png">
+		</div>
+		<form>
+			<textarea></textarea>
+			<select>
+				<option>公开评论</option>
+				<option>匿名评论</option>
+			</select>
+		</form>
+	</div>
+</body>
+<script type="text/javascript">
+	var con=true;
+	var images=document.getElementById('stars').children;
+	/*可以点多次*/
+	for (var i = 0; i < images.length; i++) {
+		images[i].a=i;
+		images[i].onmouseover=function(){
+			for (var j = 0; j < images.length; j++) {
+				images[j].src="images/star0.png";
+			};
+			if (this.a==0||this.a==1) {
+				for (var j = 0; j <= this.a; j++) {
+				images[j].src="images/star1.png";
+				};
+			}
+			else{
+				for (var j = 0; j <= this.a; j++) {
+				images[j].src="images/star2.png";
+				};
+			}
+			con=true;
+		}
+		images[i].onmouseout=function(){
+			if(con){
+				for (var j = 0; j < images.length; j++) {
+				images[j].src="images/star0.png";
+				};
+			}
+		}
+		images[i].onclick=function(){
+			con=false;
+		}
+	}
+</script>
+</html>

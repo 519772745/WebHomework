@@ -1,0 +1,94 @@
+﻿<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>图片自动滚动</title>
+  <style type="text/css">
+#picScroll{
+	width: 690px;
+	height: 458px;
+	margin: 0 auto;
+	margin-top: 20px;
+	border: solid 2px grey;
+	position: relative;
+	overflow: hidden;
+}
+#picScroll1{
+	display: block;
+	position: absolute;
+	left: 0px;
+	width: 5560px;
+}
+#picScroll1 img{
+	float: left;
+	margin-right: 2px;
+	height: 458px;
+}
+#picScroll2{
+	display: block;
+	position: absolute;
+	left: 0px;
+	width: 5560px;
+}
+#picScroll2 img{
+	float: left;
+	margin-right: 2px;
+	height: 458px;
+}
+  </style>
+ </head>
+ <body>
+ <div id="picScroll">
+	<span id="picScroll1">
+		<img src="images/1.jpg" />
+		<img src="images/2.jpg" />
+		<img src="images/3.jpg" />
+		<img src="images/4.jpg" />
+		<img src="images/5.jpg" />
+		<img src="images/6.jpg" />
+		<img src="images/7.jpg" />
+		<img src="images/8.jpg" />
+	</span>
+	<span id="picScroll2">
+		<img src="images/1.jpg" />
+		<img src="images/2.jpg" />
+		<img src="images/3.jpg" />
+		<img src="images/4.jpg" />
+		<img src="images/5.jpg" />
+		<img src="images/6.jpg" />
+		<img src="images/7.jpg" />
+		<img src="images/8.jpg" />
+	</span>
+ </div> 
+ </body>
+<script type="text/javascript">
+	var first=document.getElementById('picScroll1');
+	var second=document.getElementById('picScroll2');
+	var i=0;
+	var scroll=setInterval(
+			function() {
+			first.style.left=(-i)+"px";
+			second.style.left=5536+(-i)+"px";
+			i+=10;
+			if (i==5540) {
+				i=0;
+			}
+		},50)
+	var restart=function(){
+
+	}
+	first.onmouseover=function(){
+		clearInterval(scroll);
+	}
+	first.onmouseout=function(){
+		scroll=setInterval(
+			function() {
+			first.style.left=(-i)+"px";
+			second.style.left=5536+(-i)+"px";
+			i+=10;
+			if (i==5540) {
+				i=0;
+			}
+		},50)
+	}
+</script>
+</html>
